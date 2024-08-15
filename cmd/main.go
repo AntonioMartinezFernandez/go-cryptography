@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	cryptography "github.com/AntonioMartinezFernandez/go-cryptography/pkg/cryptography"
+	"github.com/AntonioMartinezFernandez/go-cryptography/pkg/cryptography"
 )
 
 func main() {
@@ -12,6 +12,8 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	fmt.Println(key)
 
 	encoded, err := cryptography.EncodeAes256(data, key)
 	if err != nil {
